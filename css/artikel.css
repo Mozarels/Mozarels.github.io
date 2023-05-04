@@ -1,0 +1,370 @@
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+
+    .container-sm,
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1320px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("../img/walpmain.jpg");
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+/* ================================ Navbar ================================= */
+.nav {
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    position: relative;
+    top: 0;
+    z-index: 9;
+}
+
+.nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.navlink {
+    display: inline;
+}
+
+.navlink li {
+    list-style-type: none;
+    padding: 0px 20px;
+    display: inline;
+}
+
+.navlink li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navlink li:nth-child(2) a {
+    border-bottom: 2px solid #FFC000;
+}
+
+.navlink li a img {
+    width: 25px;
+    height: 20px;
+}
+
+.brand {
+    height: 40px;
+    width: 180px;
+}
+
+
+
+
+
+/* ============================ Banner =========================== */
+.banner {
+    background-image: url("../img/articlebanner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    position: relatived;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+}
+
+.logobannerborder {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: #0a0a0a;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.logobannerborder img {
+    margin: auto;
+    height: 120px;
+    width: 120px;
+}
+
+
+
+
+/* ================== Search Bar ==================== */
+.searchnav {
+    /* position: sticky;
+    top: 0; */
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px;
+    z-index: 3;
+}
+
+.searchnav.fade {
+    background-color: transparent;
+}
+
+.sort label {
+    color: white;
+}
+
+.sort select {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    border: 1px solid #555;
+    border-radius: 70px;
+    color: #555;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.sort select:hover {
+    background-color: #111;
+}
+
+.searchdiv {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    border: 1px solid #555;
+    border-radius: 70px;
+    color: #333;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.searchdiv input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: #555;
+}
+
+
+.searchdiv button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #555;
+}
+
+.searchdiv button:hover {
+    color: #666;
+}
+
+/* =================== Row Content ==================== */
+.row {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    position: relative;
+}
+
+.result {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 2px solid yellow;
+}
+
+.par {
+    width: 100%;
+}
+
+.sidebar {
+    width: 30%;
+    display: block;
+    background-color: #FFC000;
+}
+
+.card {
+    background-color: #222;
+    width: 230px;
+    height: 350px;
+    box-shadow: 5px 5px 10px black;
+    z-index: 2;
+}
+
+.result1 {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.sidebar1 {
+    width: 30%;
+    display: block;
+}
+
+
+
+
+/* ================== Footer ==================== */
+.ft {
+    background-color: black;
+    z-index: 8;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 50px;
+    padding-bottom: 70px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer ul {
+    height: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #666;
+}
+
+.footer ul li a:hover {
+    color: #888;
+}
+
+.footer div {
+    height: 50px;
+}
+
+.footer div span:last-of-type {
+    color: #777;
+}
+
+.footer img {
+    width: 50px;
+    height: 50px;
+}
+
+.formsaran input[type=text] {
+    background-color: transparent;
+    border: 2px solid #222;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: #222;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.formsaran input[type=submit] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FFC000;
+    border: 2px solid #FFC000;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 0px;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formsaran input[type=submit]:hover {
+    background-color: #d39e00;
+    cursor: pointer;
+}
