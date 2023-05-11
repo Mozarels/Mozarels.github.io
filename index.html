@@ -17,6 +17,9 @@
 
     <!-- Swiper JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"></link>
 </head>
 <body>
     <!-- Navbar -->
@@ -25,9 +28,8 @@
             <a href=""><img class="brand" src="img/logotext.png" alt="logo"></a>
             <ul class="navlink">
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="artikel.html">Artikel</a></li>
-                <li><a href="">Lokasi</a></li>
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="#tentangkami">Tentang Kami</a></li>
+                <li><a href="artikel.php">Artikel</a></li>
                 <li><a href=""><img src="img/navsaran.png" alt="saran"></a></li>
             </ul>
         </div>
@@ -46,14 +48,14 @@
             <div class="land container">
                 <div class="title">
                     <h1>Temukan Berbagai <br> Macam Kuliner di Bojonegoro</h1>
-                    <a href="artikel.html" class="cariartikel">Cari Artikel</a>
+                    <a href="artikel.php" class="cariartikel">Cari Artikel</a>
                 </div>
 
                 <div class="landing-image">
-                    <img id="my-image" src="img/spinimg1.png" alt="image display">
-                    <img id="my-spindua" src="img/spin2img1.png" alt="spin 2">
-                    <img id="my-spintiga" src="img/spin2img2.png" alt="spin 3">
-                    <img id="my-minuman" src="img/spin3img1.png" alt="spin minuman">
+                    <img id="my-image" src="img/spinimg1.webp" alt="image display">
+                    <img id="my-spindua" src="img/spin2img1.webp" alt="spin 2">
+                    <img id="my-spintiga" src="img/spin2img2.webp" alt="spin 3">
+                    <img id="my-minuman" src="img/spin3img1.webp" alt="spin minuman">
                 </div>
             </div>
         </div>
@@ -66,7 +68,7 @@
                 </div>
 
                 <div>
-                    <span><a href="">Cek Lokasi Bojonegoro<br> Melalui Map di Sini</a></span>
+                    <span><a href="https://www.google.com/maps/d/u/0/viewer?mid=1i-0wpeuttIJjnkIwrLbav2EkgoQ&hl=en&ll=-7.157698969326983%2C111.89317700000004&z=13" target="_blank">Cek Lokasi Bojonegoro<br> Melalui Map di Sini</a></span>
                     <img src="img/landingmap.png" alt="pin">
                 </div>
             </div>
@@ -84,28 +86,108 @@
     <div class="container">
         <img class="favlightyellow" src="img/lightyellow.png" alt="lightwhite">
         <img class="favlightyellow2" src="img/lightyellow.png" alt="lightwhite">
-        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="4"centered-slides="true" space-between="30" grab-cursor="true">
+        <swiper-container id="swiper-favorit" class="mySwiper" pagination="true" pagination-clickable="true" slides-per-view="4"centered-slides="true" space-between="30" grab-cursor="true">
             <swiper-slide>
-                <img src="" alt="">
+                <img src="uploads/ledre.png" alt="Food">
                 <div>
-                    <span>1</span>
-                    <span>1</span>
+                    <span>Rp5000</span>
+                    <i class="info fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Ledre adalah salah satu makanan khas bojonegoro yang bisa dibeli dengan harga terjangkau.
+                    </div>
                 </div>
                 <div>
-                    <span>1</span>
-                    <a href="">1</a>
+                    <span class="namamakanan">Kue Ledre</span>
+                    <a href="">Baca</a>
                 </div>
             </swiper-slide>
-            <swiper-slide>Slide 2</swiper-slide>
-            <swiper-slide>Slide 3</swiper-slide>
-            <swiper-slide>Slide 4</swiper-slide>
-            <swiper-slide>Slide 5</swiper-slide>
-            <swiper-slide>Slide 6</swiper-slide>
-            <swiper-slide>Slide 7</swiper-slide>
-            <swiper-slide>Slide 8</swiper-slide>
+            <swiper-slide>
+                <img src="uploads/tahu.png" alt="Food">
+                <div>
+                    <span>Rp2000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Tahu adalah makanan yang populer dan sering diolah sebagai lauk atau camilan dengan rasa asin.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Tahu Goreng</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="uploads/ayamcrispy.png" alt="Food">
+                <div>
+                    <span>Rp12.000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Makanan yang sering menjadi favorit semua orang, tidak sedikit yang menyediakan makanan ini.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Ayam Crispy</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="uploads/miegoreng.png" alt="Food">
+                <div>
+                    <span>Rp7000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Makanan praktis yang dapat dibuat semua orang, tetapi banyak juga yang menjual Mie Goreng di Bojonegoro.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Mie Goreng</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="uploads/nasigoreng.png" alt="Food">
+                <div>
+                    <span>Rp10000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Opsi untuk mengobati rasa lapar dengan harga yang murah, nasi goreng  menjadi salah satu makanan paling umum.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Nasi Goreng</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="uploads/pecel.png" alt="Food">
+                <div>
+                    <span>Rp9000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Nasi Pecel sering tersedia pada waktu pagi dan sering dikonsumsi sebagai sarapan oleh banyak orang.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Nasi Pecel</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <img src="uploads/sate.png" alt="Food">
+                <div>
+                    <span>Rp2000</span>
+                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                    <div class="infohover">
+                        Sate sangat cocok disajikan untuk banyak orang, kebanyakan pembeli akan memesan dalam jumlah besar.
+                    </div>
+                </div>
+                <div>
+                    <span class="namamakanan">Sate Tusuk</span>
+                    <a href="">Baca</a>
+                </div>
+            </swiper-slide>
         </swiper-container>
 
-        <a class="lihatsemua" href="">Lihat Semua</a>
+        <a class="lihatsemua" href="artikel.php">Lihat Semua</a>
     </div>
 
 
@@ -118,7 +200,7 @@
                 <h1>Tentang <br>Bojonegoro</h1>
                 <p>Bojonegoro adalah sebuah wilayah kabupaten di Provinsi Jawa Timur, Indonesia. Bojonegoro memiliki banyak ragam kuliner tersebar dari makanan tradisional sampai modern yang dapat dibeli dengan harga yang terjangkau.
                 </p>
-                <a class="ceklok" href="">Cek Lokasi</a>
+                <a class="ceklok" href="https://www.google.com/maps/d/u/0/viewer?mid=1i-0wpeuttIJjnkIwrLbav2EkgoQ&hl=en&ll=-7.157698969326983%2C111.89317700000004&z=13" target="_blank">Cek Lokasi</a>
             </div>
         </div>
     </div>
@@ -127,7 +209,7 @@
 
 
     <!-- Tentang Kami -->
-    <div class="tk container">
+    <div id="tentangkami" class="tk container">
         <img class="tklightwhite" src="img/lightwhite.png" alt="lightwhite">
         <img class="tklightyellow" src="img/lightyellow.png" alt="lightwhite">
         <img class="tklightyellow2" src="img/lightyellow.png" alt="lightwhite">
@@ -177,8 +259,8 @@
             <img src="img/logo.png" alt="logo">
             <ul>
                 <li>Konten Kami</li>
-                <li><a href="">Artikel</a></li>
-                <li><a href="">Lokasi</a></li>
+                <li><a href="artikel.php">Artikel</a></li>
+                <li><a href="https://www.google.com/maps/d/u/0/viewer?mid=1i-0wpeuttIJjnkIwrLbav2EkgoQ&hl=en&ll=-7.157698969326983%2C111.89317700000004&z=13" target="_blank">Lokasi</a></li>
             </ul>
             <ul>
                 <li>Kategori Kuliner</li>

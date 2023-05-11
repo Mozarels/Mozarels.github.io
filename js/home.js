@@ -1,9 +1,9 @@
 const images = [
-    '../img/spinimg1.png',
-    '../img/spinimg2.png',
-    '../img/spinimg3.png',
-    '../img/spinimg4.png',
-    '../img/spinimg5.png',
+    '../img/spinimg1.webp',
+    '../img/spinimg2.webp',
+    '../img/spinimg3.webp',
+    '../img/spinimg4.webp',
+    '../img/spinimg5.webp',
   ];
   let currentImageIndex = 0;
   
@@ -19,19 +19,19 @@ const images = [
   image.classList.add('spin');
 
 const makananKecil = [
-    '../img/spin2img1.png',
-    '../img/spin2img2.png',
-    '../img/spin2img3.png',
-    '../img/spin2img4.png',
-    '../img/spin2img5.png',
-    '../img/spin2img6.png',
-    '../img/spin2img7.png',
-    '../img/spin2img8.png',
-    '../img/spin2img9.png',
-    '../img/spin2img10.png',
-    '../img/spin2img11.png',
-    '../img/spin2img12.png',
-    '../img/spin2img13.png',
+    '../img/spin2img1.webp',
+    '../img/spin2img2.webp',
+    '../img/spin2img3.webp',
+    '../img/spin2img4.webp',
+    '../img/spin2img5.webp',
+    '../img/spin2img6.webp',
+    '../img/spin2img7.webp',
+    '../img/spin2img8.webp',
+    '../img/spin2img9.webp',
+    '../img/spin2img10.webp',
+    '../img/spin2img11.webp',
+    '../img/spin2img12.webp',
+    '../img/spin2img13.webp',
 ];
 
 let currentSpinDua = 0;
@@ -67,15 +67,15 @@ gambarSpinTiga.classList.add('spintigaclass');
 
 
 const minuman = [
-  '../img/spin3img1.png',
-  '../img/spin3img2.png',
-  '../img/spin3img3.png',
-  '../img/spin3img4.png',
-  '../img/spin3img5.png',
-  '../img/spin3img6.png',
-  '../img/spin3img7.png',
-  '../img/spin3img8.png',
-  '../img/spin3img9.png',
+  '../img/spin3img1.webp',
+  '../img/spin3img2.webp',
+  '../img/spin3img3.webp',
+  '../img/spin3img4.webp',
+  '../img/spin3img5.webp',
+  '../img/spin3img6.webp',
+  '../img/spin3img7.webp',
+  '../img/spin3img8.webp',
+  '../img/spin3img9.webp',
 ];
 
 let currentSpinMinuman = 0;

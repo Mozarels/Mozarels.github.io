@@ -121,7 +121,7 @@ body {
     color: white;
 }
 
-.navlink li:nth-child(2) a {
+.navlink li:nth-child(3) a {
     border-bottom: 2px solid #FFC000;
 }
 
@@ -263,11 +263,92 @@ body {
 }
 
 .card {
-    background-color: #222;
     width: 230px;
     height: 350px;
     box-shadow: 5px 5px 10px black;
     z-index: 2;
+    text-align: center;
+    font-size: 18px;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 20px black;
+    color: white;
+    padding: 20px;
+}
+
+.card img {
+    display: block;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.card div {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.card img {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.card div a {
+    background-color: #FFC000;
+    padding: 5px 20px;
+    color: #1a1a1a;
+    text-decoration: none;
+    max-height: 35px;
+    margin: auto;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.card div a:hover {
+    background-color: #d39e00;
+}
+
+.card span {
+    color: #555;
+}
+
+.namamakanan {
+    font-size: 1.3rem;
+    text-align: left;
+    color: white !important;
+    line-height: 30px;
+}
+
+.infohover {
+    display: none;
+    position: absolute;
+    background-color: #222;
+    border: 2px solid #555;
+    color: white;
+    height: 50px;
+    width: 200px;
+    height: 100px;
+    z-index: 2;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.card div i:hover + div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.card div i {
+    color: #555;
 }
 
 .result1 {
