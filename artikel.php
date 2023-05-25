@@ -1,5 +1,5 @@
-<?php include("config.php"); ?>
 <!DOCTYPE html>
+<?php include("config.php"); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,10 +25,10 @@
         <div class="container">
             <a href=""><img class="brand" src="img/logotext.png" alt="logo"></a>
             <ul class="navlink">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="index.html">Tentang Kami</a></li>
-                <li><a href="">Artikel</a></li>
-                <li><a href=""><img src="img/navsaran.png" alt="saran"></a></li>
+            <li><a href="index.php">Beranda</a></li>
+                <li><a href="index.php#tentangkami">Tentang Kami</a></li>
+                <li><a href="artikel.php">Artikel</a></li>
+                <li><a href="#kotaksaranid"><img src="img/navsaran.png" alt="saran" title="Beri Saran"></a></li>
             </ul>
         </div>
     </nav>
@@ -41,15 +41,17 @@
     </div>
 
     <!-- =================== Search Bar ======================= -->
+    <form action="" method="post">
     <div class="container searchnav">
         <div class="sort">
             <Label for="sortselect">Urutkan Menurut : </Label>
             <select name="sortselect">
-                <option value="">Paling Banyak Dicari</option>
-                <option value="">Paling Populer</option>
-                <option value="">Baru Ditambahkan</option>
-                <option value="">Lama Ditambahkan</option>
+                <option value="semua">Semua</option>
+                <option value="populer">Paling Populer</option>
+                <option value="baru">Baru Ditambahkan</option>
+                <option value="lama">Lama Ditambahkan</option>
             </select>
+            <button><i class="fa fa-link"></i></button>
         </div>
 
         <div class="searchdiv">
@@ -62,21 +64,42 @@
     <!-- ================== Row ===================== -->
     <div class="container row">
         <div class="result">
-            <div class="par"><span>Menampilkan <span><?php $articlesql = "SELECT * FROM artikel"; $articlequery = mysqli_query($db, $articlesql);echo mysqli_num_rows($articlequery) ?></span> Hasil</span><br></div>
 
             <?php
-            while($art = mysqli_fetch_array($articlequery)) {
-                echo "<div class='card'><img src='".$art['gambar']."' alt='Food'><div><span>".$art['harga']."</span><i class='fa fa-info-circle' aria-hidden='true'></i><div class='infohover'>".$art['hover']."</div></div><div><span class='namamakanan'>".$art['nama']."</span><a href=''>Baca</a></div></div>";
-            }
-                ?>
+            // Semua Data
+            $semuasql = "SELECT * FROM artikel";
+            $semuaquery = mysqli_query($db, $semuasql);
+
+            // $populersql = "SELECT count(*) as total FROM artikel ORDER BY popularitas DESC";
+            // $populerquery = mysqli_query($db, $populersql);
+
+            // $barusql = "SELECT count(*) as total FROM artikel ORDER BY tanggal DESC";
+            // $baruquery = mysqli_query($db, $barusql);
+
+            // $lamasql = "SELECT count(*) as total FROM artikel ORDER BY tanggal ASC";
+            // $lamaquery = mysqli_query($db, $lamasql);
+
+            // if (isset($_POST['sortselect'])) { ?>
+            <?php while($hasilsemua = mysqli_fetch_array($semuaquery)) { ?>
+                <div class='card'>
+                    <img src="<?php echo $uploads_url.$hasilsemua['gambar'] ?>" alt='Makanan'>
+                    <div>
+                        <span class='namamakanan'><?php echo $hasilsemua['nama'] ?></span>
+                        <a href="#">Baca</a>
+                    </div>
+                </div>         
+            <?php } ?>
+
         </div>
-        <div class="sidebar"></div>
+        <div class="sidebar">1</div>
     </div>
 
     <div class="container row">
         <div class="result1">1</div>
         <div class="sidebar1"></div>
     </div>
+
+    </form>
 
 
     <!-- ================== Footer ================= -->
@@ -102,14 +125,27 @@
                 <span>Memiliki Saran?</span><br>
                 <span>Kirim ke sini</span>
                 <div class="kotaksaran">
-                    <form class="formsaran" action="">
-                        <input type="text" placeholder="Tulis saranmu di sini" autocomplete="off">
-                        <input type="submit" name="" id="">
+                    <form class="formsaran" action="proses-saran-artikel.php" method="post">
+                        <input type="text" placeholder="Tulis saranmu di sini" autocomplete="off" name="isisaran">
+                        <input type="submit" name="submitsaran" id="">
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- ====================== Alert Saran ======================== -->
+    <?php if(isset($_GET['saran'])): ?>
+    <div>
+        <?php
+        if($_GET['saran'] == 'sukses'){
+            echo "<script>alert('Saran Berhasil ditambahkan, terimakasih atas sarannya! - Kelompok 3');</script>";
+        } else {
+            echo "<script>alert('Saran gagal ditambahkan');</script>";
+        }
+        ?>
+    </div>
+    <?php endif; ?>
 
     <!-- ====== JS ======= -->
     <script>

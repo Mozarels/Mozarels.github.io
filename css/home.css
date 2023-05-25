@@ -64,21 +64,25 @@
     }
 }
 
+html {
+    scroll-behavior: smooth !important;
+}
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url("../img/walpmain.jpg");
+    background-image: url("../img/walpmain.webp");
     background-size: cover;
     background-repeat: repeat-y;
     background-color: black;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 
@@ -174,8 +178,29 @@ body {
     color: #FFC000;
     border: 3px solid #FFC000;
     border-radius: 10px;
-    transition: 0.3s;
+    transition: 0.4s ease-in;
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
 }
+
+/* .cariartikel::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+}
+
+.cariartikel:hover:after {
+    height: 100%;
+    width: 135%;
+} */
 
 .cariartikel:hover {
     background-color: #FFC000;
@@ -257,7 +282,7 @@ body {
 .llcon {
     position: relative;
     bottom: 0;
-    margin-top: 80px;
+    margin-top: 60px;
     margin-bottom: 0;
     z-index: 7;
 }
@@ -421,6 +446,10 @@ swiper-slide div {
     color: #555;
 }
 
+#swiper-favorit swiper-slide div:first-of-type span {
+    visibility: hidden;
+}
+
 .lihatsemua {
     width: 200px;
     display: block;
@@ -572,17 +601,20 @@ swiper-slide div {
 
 .swiper-slide1 img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
+    border: none;
+    border-radius: 70px;
+    outline: 5px solid white;
+    outline-offset: 5px;
 }
 
 .swiper-slide1 span:first-of-type {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 30px;
     font-weight: 800;
 }
-
 
 
 
@@ -643,7 +675,7 @@ swiper-slide div {
     border: 2px solid #222;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: #222;
+    color: #999;
     padding: 5px 10px;
     margin: 5px 0px;
     outline: none;

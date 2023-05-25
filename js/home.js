@@ -1,9 +1,9 @@
 const images = [
-    '../img/spinimg1.webp',
-    '../img/spinimg2.webp',
-    '../img/spinimg3.webp',
-    '../img/spinimg4.webp',
-    '../img/spinimg5.webp',
+    'http://localhost/mozaliner/img/spinimg1.webp',
+    'http://localhost/mozaliner/img/spinimg2.webp',
+    'http://localhost/mozaliner/img/spinimg3.webp',
+    'http://localhost/mozaliner/img/spinimg4.webp',
+    'http://localhost/mozaliner/img/spinimg5.webp',
   ];
   let currentImageIndex = 0;
   
@@ -19,19 +19,19 @@ const images = [
   image.classList.add('spin');
 
 const makananKecil = [
-    '../img/spin2img1.webp',
-    '../img/spin2img2.webp',
-    '../img/spin2img3.webp',
-    '../img/spin2img4.webp',
-    '../img/spin2img5.webp',
-    '../img/spin2img6.webp',
-    '../img/spin2img7.webp',
-    '../img/spin2img8.webp',
-    '../img/spin2img9.webp',
-    '../img/spin2img10.webp',
-    '../img/spin2img11.webp',
-    '../img/spin2img12.webp',
-    '../img/spin2img13.webp',
+    'http://localhost/mozaliner/img/spin2img1.webp',
+    'http://localhost/mozaliner/img/spin2img2.webp',
+    'http://localhost/mozaliner/img/spin2img3.webp',
+    'http://localhost/mozaliner/img/spin2img4.webp',
+    'http://localhost/mozaliner/img/spin2img5.webp',
+    'http://localhost/mozaliner/img/spin2img6.webp',
+    'http://localhost/mozaliner/img/spin2img7.webp',
+    'http://localhost/mozaliner/img/spin2img8.webp',
+    'http://localhost/mozaliner/img/spin2img9.webp',
+    'http://localhost/mozaliner/img/spin2img10.webp',
+    'http://localhost/mozaliner/img/spin2img11.webp',
+    'http://localhost/mozaliner/img/spin2img12.webp',
+    'http://localhost/mozaliner/img/spin2img13.webp',
 ];
 
 let currentSpinDua = 0;
@@ -67,15 +67,15 @@ gambarSpinTiga.classList.add('spintigaclass');
 
 
 const minuman = [
-  '../img/spin3img1.webp',
-  '../img/spin3img2.webp',
-  '../img/spin3img3.webp',
-  '../img/spin3img4.webp',
-  '../img/spin3img5.webp',
-  '../img/spin3img6.webp',
-  '../img/spin3img7.webp',
-  '../img/spin3img8.webp',
-  '../img/spin3img9.webp',
+  'http://localhost/mozaliner/img/spin3img1.webp',
+  'http://localhost/mozaliner/img/spin3img2.webp',
+  'http://localhost/mozaliner/img/spin3img3.webp',
+  'http://localhost/mozaliner/img/spin3img4.webp',
+  'http://localhost/mozaliner/img/spin3img5.webp',
+  'http://localhost/mozaliner/img/spin3img6.webp',
+  'http://localhost/mozaliner/img/spin3img7.webp',
+  'http://localhost/mozaliner/img/spin3img8.webp',
+  'http://localhost/mozaliner/img/spin3img9.webp',
 ];
 
 let currentSpinMinuman = 0;

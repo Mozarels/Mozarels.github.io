@@ -141,7 +141,7 @@ body {
 
 /* ============================ Banner =========================== */
 .banner {
-    background-image: url("../img/articlebanner.jpg");
+    background-image: url("../img/articlebanner.webp");
     background-size: cover;
     background-repeat: no-repeat;
     height: 200px;
@@ -199,6 +199,7 @@ body {
     padding: 10px;
     outline: none;
     transition: 0.3s;
+    text-align: center;
 }
 
 .sort select:hover {
@@ -245,11 +246,11 @@ body {
 }
 
 .result {
+    --result-column: 3;
     width: 70%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(var(--result-column), 1fr);
     gap: 20px;
-    border: 2px solid yellow;
 }
 
 .par {
@@ -264,7 +265,7 @@ body {
 
 .card {
     width: 230px;
-    height: 350px;
+    height: 320px;
     box-shadow: 5px 5px 10px black;
     z-index: 2;
     text-align: center;
@@ -285,6 +286,9 @@ body {
     height: 70%;
     object-fit: cover;
     margin: auto;
+    height: 180px;
+    width: 180px;
+    margin-bottom: 20px;
 }
 
 .card div {
@@ -292,12 +296,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between !important;
-}
-
-.card img {
-    height: 180px;
-    width: 180px;
-    margin-bottom: 20px;
 }
 
 .card div a {
@@ -315,40 +313,11 @@ body {
     background-color: #d39e00;
 }
 
-.card span {
-    color: #555;
-}
-
 .namamakanan {
     font-size: 1.3rem;
     text-align: left;
     color: white !important;
     line-height: 30px;
-}
-
-.infohover {
-    display: none;
-    position: absolute;
-    background-color: #222;
-    border: 2px solid #555;
-    color: white;
-    height: 50px;
-    width: 200px;
-    height: 100px;
-    z-index: 2;
-    font-size: 0.8rem;
-    text-align: center;
-}
-
-.card div i:hover + div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
-
-.card div i {
-    color: #555;
 }
 
 .result1 {
@@ -425,7 +394,7 @@ body {
     border: 2px solid #222;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: #222;
+    color: #999;
     padding: 5px 10px;
     margin: 5px 0px;
     outline: none;
